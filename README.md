@@ -1,4 +1,4 @@
-# AirportVision
+# Demo-Angular4-ngrx-gate-management
 
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 1.3.3
@@ -39,7 +39,8 @@ src/                         project source code
 |- polyfills.ts              polyfills needed by Angular
 +- test.ts                   unit tests entry point
 reports/                     test and coverage reports
-proxy.conf.js                backend proxy configuration
+proxy.conf.https.js                backend proxy configuration for https
+proxy.conf.js                backend proxy configuration for http
 ```
 
 # Main tasks
@@ -104,10 +105,11 @@ Development, build and quality processes are based on [angular-cli](https://gith
 
 #### Libraries
 
-- [Angular 2](https://angular.io)
+- [Angular 4](https://angular.io)
 - [Bootstrap 4](https://v4-alpha.getbootstrap.com)
 - [Font Awesome](http://fontawesome.io)
 - [RxJS](http://reactivex.io/rxjs)
+- [Ngrx] (https://github.com/ngrx)
 - [ng-bootsrap](https://ng-bootstrap.github.io/)
 - [ngx-translate](https://github.com/ngx-translate/core)
 - [Lodash](https://lodash.com)
