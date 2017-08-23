@@ -1,7 +1,10 @@
 # Demo-Angular4-ngrx-gate-management
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 1.3.3
+This project aim to create a angular 4 spa with ng-bootstrap and state management (ngrx) with some dummy data
+@angular/core": "^4.3.6,
+"@ngrx/store": "^4.0.3",
+"rxjs": "^5.4.3",
+"bootstrap": "4.0.0-alpha.6"
 
 # Getting started
 
