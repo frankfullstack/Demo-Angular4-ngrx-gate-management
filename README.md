@@ -109,7 +109,7 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - [Bootstrap 4](https://v4-alpha.getbootstrap.com)
 - [Font Awesome](http://fontawesome.io)
 - [RxJS](http://reactivex.io/rxjs)
-- [Ngrx] (https://github.com/ngrx)
+- [Ngrx](https://github.com/ngrx)
 - [ng-bootsrap](https://ng-bootstrap.github.io/)
 - [ngx-translate](https://github.com/ngx-translate/core)
 - [Lodash](https://lodash.com)
