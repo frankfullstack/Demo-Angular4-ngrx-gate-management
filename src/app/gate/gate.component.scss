@@ -1,0 +1,174 @@
+.container-fluid {
+    padding-left: 20px;
+}
+
+$font-sz: 18px;
+$textcolor: #fff;
+$bg-tile-selected: #D7D5D5;
+$tile-radius: 4px;
+$font-fam: "Proxima Nova Bold",
+arial,
+sans-serif;
+$button-next-bg-color: #4285F4;
+$button-next-bg-color2: #5EBA7D;
+.av-dropdown {
+    $dropdown-radius: 40px;
+    margin-left: 10px;
+    z-index: 1000;
+    margin-bottom: 1em;
+    font-family: $font-fam;
+    font-size: $font-sz;
+    color: $textcolor;
+    line-height: $font-sz;
+    padding: 8px 21px;
+    border: 1px solid #506165;
+    -webkit-border-radius: $dropdown-radius;
+    border-radius: $dropdown-radius;
+    cursor: default;
+    .title {
+        font-family: $font-fam;
+        text-transform: capitalize;
+        font-size: $font-sz;
+        color: $textcolor;
+    }
+}
+
+@keyframes moveArrow {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 3px;
+    }
+}
+
+@mixin base-btn-next() {
+    cursor: pointer;
+    &:hover {
+        animation-duration: 700ms;
+        animation-iteration-count: infinite;
+        animation-name: moveArrow;
+    }
+}
+
+.btn-next {
+    color: $button-next-bg-color;
+    @include base-btn-next();
+}
+
+.btn-next-2 {
+    color: $button-next-bg-color2;
+    @include base-btn-next();
+}
+
+.btn-message-sender {
+    cursor: pointer;
+     :hover {
+        color: aqua!important;
+    }
+}
+
+span.col-text {
+    width: 120px;
+    display: inline-block;
+}
+
+$btn-size: 60px;
+.btn-fl-select {
+    background: #d3d3d8;
+    border-radius: 50%;
+    height: $btn-size;
+    width: $btn-size;
+    &:focus {
+        outline: 0;
+    }
+}
+
+$mg-align-l: 10px;
+.flight-detail {
+    float: left;
+    font-family: $font-fam;
+    margin-left: $mg-align-l;
+    min-width: 285px;
+}
+
+.av-tile-detail {
+    padding: 20px;
+    border-radius: $tile-radius;
+    width: 285px;
+    background: $bg-tile-selected;
+    height: 566px;
+    border: 2px solid transparent;
+}
+
+$sz-width-small: 350px;
+$sz-height-small: 260px;
+.av-tile {
+    background: $textcolor;
+    -webkit-border-radius: $tile-radius;
+    border-radius: $tile-radius;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 20px;
+}
+
+.av-small {
+    height: $sz-height-small;
+    width: $sz-width-small;
+}
+
+.time-to {
+    width: 100px;
+}
+
+.dropdown-w {
+    width: 165px
+}
+
+.flights {
+    float: left;
+    margin-left: $mg-align-l;
+    min-height: 500px;
+    font-family: $font-fam;
+    overflow: auto;
+}
+
+@media (min-width: 576px) {
+    .flights {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 800px) {
+    .flights {
+        max-width: 451px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .flights {
+        max-width: 421px;
+        height: 550px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .flights {
+        max-width: 788px;
+        height: 550px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .flights {
+        max-width: 1155px;
+        height: 630px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .flights {
+        max-width: 1530px;
+        height: 790px;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="av-tile av-small" [style.background-color]="activeBgColor">
+    <h2> {{FlightItem.Flight}} </h2>
+    <p>
+        <span class="col-text" translate> Status </span>
+        <span> {{FlightItem.CurrentStatus}} </span>
+        <i class="fa fa-forward fa-lg btn-next" aria-hidden="true"></i>
+
+    </p>
+    <p>
+        <span class="col-text" translate> Boarding By </span>
+        <span> {{FlightItem.CurrentBoardingBy}} </span>
+        <i class="fa fa-forward fa-lg btn-next-2" aria-hidden="true"></i>
+    </p>
+    <p>
+        <span class="col-text" translate> Remaining  </span>
+        <span> <app-countdown [days]="FlightItem.CountdownTime.days" [hours]="FlightItem.CountdownTime.hours" [minutes]="FlightItem.CountdownTime.minutes" [seconds]="FlightItem.CountdownTime.seconds"></app-countdown> </span>
+    </p>
+    <button class="btn-fl-select" (click)="onSelectFlight(FlightItem)" translate> Select </button>
+</div>

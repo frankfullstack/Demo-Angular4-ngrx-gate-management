@@ -1,0 +1,38 @@
+<div class="container-fluid mb-2">
+    <div class="row av-tile-detail" [@focusPanel]='state'>
+        <div>
+            <h2> {{selectedFlight?selectedFlight.Flight:""}} <span *ngIf="selectedGate"></span></h2>
+            <div>
+                <span translate> Current Sequense </span><br>
+                <select class="form-control" [disabled]="!selectedFlight">
+                                <option *ngFor="let item of lstSequense" [selected]="selectedFlight && selectedFlight.CurrentSequence==item"> {{item}}  </option>
+                            </select>
+            </div>
+        </div>
+        <div>
+            <label translate> Status </label><br>
+            <select class="form-control" [disabled]="!selectedFlight">
+                            <option *ngFor="let item of lstStatus" [selected]="selectedFlight && selectedFlight.CurrentStatus==item"> {{item}}  </option>
+                        </select>
+        </div>
+        <div>
+            <span translate> Time to departure </span><br>
+            <input class="form-control" value="{{selectedFlight && selectedFlight.DepartureDue}}" [disabled]="!selectedFlight" />
+        </div>
+        <div>
+            <span translate> Boarding Sequense </span><br>
+            <select class="form-control" [disabled]="!selectedFlight">
+                                <option *ngFor="let item of lstStatus" [selected]="selectedFlight && selectedFlight.CurrentBoardingBy==item"> {{item}} </option>
+                            </select>
+        </div>
+        <div>
+            <span translate> Boarding Status </span><br>
+            <select class="form-control" [disabled]="!selectedFlight">
+                                <option *ngFor="let item of lstStatus" [selected]="selectedFlight && selectedFlight.CurrentBoardingBy==item"> {{item}}  </option>
+                            </select>
+
+        </div>
+        <button class="btn btn-primary" [disabled]="!selectedFlight"> <span  translate>Update Flight</span> </button>
+    </div>
+
+</div>

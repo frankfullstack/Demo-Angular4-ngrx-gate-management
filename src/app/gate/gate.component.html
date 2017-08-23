@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="av-dropdown">
+            <span><i class="fa fa-plane fa-lg" aria-hidden="true"></i></span>
+            <span class="title" translate>Gate</span>
+            <div ngbDropdown class="d-inline">
+                <button ngbDropdownToggle class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{selectedGate.Gate}}
+                  </button>
+                <div class="dropdown-menu">
+                    <button *ngFor="let gate of lstGate" class="dropdown-item" type="button" (click)=onGateChange(gate)>{{gate.Gate}}</button>
+                </div>
+            </div>
+
+            <app-modal modelHeader="Send Message" class="d-inline-block">
+                <div modelLinkAttr>
+                    <a class="btn-message-sender"><i class="fa fa-th fa-lg" aria-hidden="true"></i></a>
+                </div>
+                <div modelContentAttr>
+                    <form>
+
+                        <p translate>Person to page</p>
+                        <input class="form-control" />
+
+                        <p translate>Free text</p>
+                        <textarea class="form-control"></textarea>
+
+                        <p translate>Send To</p>
+                        <p>
+                            <ss-multiselect-dropdown [options]="myOptions" [(ngModel)]="optionsModel" [ngModelOptions]="{standalone: true}" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
+                        </p>
+
+                        <p>
+                            <button class="btn btn-primary" translate> Update Text For Devices </button>
+                        </p>
+
+                    </form>
+                </div>
+            </app-modal>
+        </div>
+    </div>
+    <div class="row">
+        <div class="flight-detail">
+            <app-flightdetail [selectedFlight]="selectedFlight" [selectedGate]="todos$" [state]='state'></app-flightdetail>
+        </div>
+
+        <div class="flights ">
+            <app-flightlist [FlightList]="selectedGate.Collection" (onFlightSelected)="selectFlight($event)"></app-flightlist>
+        </div>
+    </div>
+</div>
